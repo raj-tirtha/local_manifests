@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Replace AOSP versions with LineageOS ones the trees were built against -->
+  <remove-project name="platform/hardware/google/interfaces" />
+  <remove-project name="platform/hardware/google/camera" />
+
+  <!-- Device trees -->
+  <project name="raj-tirtha/android_device_google_pantah"
+           path="device/google/pantah" remote="github" revision="penguin-17" />
+  <project name="raj-tirtha/android_device_google_gs201"
+           path="device/google/gs201" remote="github" revision="penguin-17" />
+
+  <!-- Kernel (6.1 LineageOS prebuilts) -->
+  <project name="LineageOS/android_device_google_pantah-kernels"
+           path="device/google/pantah-kernels" remote="github" revision="lineage-24.0" clone-depth="1" />
+
+  <!-- Vendor blobs (with mic and V4A fixes) -->
+  <project name="raj-tirtha/proprietary_vendor_google_cheetah"
+           path="vendor/google/cheetah" remote="github" revision="penguin-17" clone-depth="1" />
+
+  <!-- Pixel hardware -->
+  <project name="LineageOS/android_hardware_google_interfaces"
+           path="hardware/google/interfaces" remote="github" revision="lineage-24.0" />
+  <project name="LineageOS/android_hardware_google_camera"
+           path="hardware/google/camera" remote="github" revision="lineage-24.0" />
+  <project name="LineageOS/android_hardware_google_pixel"
+           path="hardware/google/pixel" remote="github" revision="lineage-24.0" />
+  <project name="LineageOS/android_hardware_google_pixel-sepolicy"
+           path="hardware/google/pixel-sepolicy" remote="github" revision="lineage-24.0" />
+
+  <!-- LineageOS HALs and compat used by the trees -->
+  <project name="LineageOS/android_hardware_lineage_generic-ims"
+           path="hardware/lineage/generic-ims" remote="github" revision="lineage-24.0" />
+
+  <!-- ViPER4Android -->
+  <project name="TogoFire/packages_apps_ViPER4AndroidFX"
+           path="packages/apps/ViPER4AndroidFX" remote="github" revision="v4a" />
+  <!-- Audio compress library (non-Qualcomm version) -->
+  <remove-project name="AOSPA/android_external_tinycompress" />
+  <project name="LineageOS/android_external_tinycompress"
+           path="external/tinycompress" remote="github" revision="lineage-24.0" />
+  <!-- 6.12 Syd kernel prebuilts (binaries committed in git) -->
+  <project name="yaap/device_google_pantah-kernel"
+           path="device/google/pantah-kernels/6.12" remote="github" revision="seventeen" clone-depth="1" />
+  <!-- Wi-Fi supplicant (non-Qualcomm version) -->
+  <remove-project name="Project-PenguinOS/external_wpa_supplicant_8" />
+  <project name="LineageOS/android_external_wpa_supplicant_8"
+           path="external/wpa_supplicant_8" remote="github" revision="lineage-24.0" />
+</manifest>
