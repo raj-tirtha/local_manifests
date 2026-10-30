@@ -46,4 +46,8 @@
   <remove-project name="Project-PenguinOS/external_wpa_supplicant_8" />
   <project name="LineageOS/android_external_wpa_supplicant_8"
            path="external/wpa_supplicant_8" remote="github" revision="lineage-24.0" />
+  <!-- Bluetooth: drop QTI patch that rejects AOSP BT audio HAL (Tensor has no QTI HAL) -->
+  <remove-project name="Project-PenguinOS/hardware_interfaces" />
+  <project name="raj-tirtha/hardware_interfaces"
+           path="hardware/interfaces" remote="github" revision="local-bt-audio-fix" />
 </manifest>
