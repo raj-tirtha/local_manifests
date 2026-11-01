@@ -1,14 +1,16 @@
 #!/bin/bash
-# Run from the Penguin OS source root after syncing, before building cheetah.
+# Run from the Penguin OS source root after syncing, before building cheetah or panther.
 set -e
-mkdir -p vendor/aospa/products/cheetah
-cat > vendor/aospa/products/cheetah/beans.xml <<'XML'
+for dev in cheetah panther; do
+  mkdir -p vendor/aospa/products/$dev
+  cat > vendor/aospa/products/$dev/beans.xml <<'XML'
 <?xml version='1.0' encoding='utf-8'?>
 <!-- Dependencies are provided by .repo/local_manifests/cheetah.xml -->
 <manifest>
 </manifest>
 XML
-# Hide Qualcomm-only repos from Soong (cheetah is Tensor)
+done
+# Hide Qualcomm-only repos from Soong (Pixel 7/7 Pro are Tensor)
 for d in vendor/qcom/common \
          vendor/qcom/opensource/data-ipa-cfg-mgr \
          vendor/qcom/opensource/data-ipa-cfg-mgr-legacy \

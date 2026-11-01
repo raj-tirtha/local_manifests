@@ -17,6 +17,8 @@
   <!-- Vendor blobs (with mic and V4A fixes) -->
   <project name="raj-tirtha/proprietary_vendor_google_cheetah"
            path="vendor/google/cheetah" remote="github" revision="penguin-17" clone-depth="1" />
+  <project name="raj-tirtha/proprietary_vendor_google_panther"
+           path="vendor/google/panther" remote="github" revision="penguin-17" clone-depth="1" />
 
   <!-- Pixel hardware -->
   <project name="LineageOS/android_hardware_google_interfaces"
