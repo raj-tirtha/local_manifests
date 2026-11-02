@@ -23,3 +23,6 @@ for d in vendor/qcom/common \
 done
 rm -rf out/.module_paths
 echo "Penguin OS cheetah setup done."
+
+# Tensor: stop QTI-only framework lookups from retrying forever
+python3 "$(dirname "$0")/patches/qti_noretry.py"
