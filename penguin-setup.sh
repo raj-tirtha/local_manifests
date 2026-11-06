@@ -17,6 +17,7 @@ for d in vendor/qcom/common \
          vendor/qcom/opensource/dataservices \
          vendor/qcom/opensource/recovery-ext \
          vendor/qcom/opensource/thermal-hal \
+         vendor/qcom/opensource/libvmmem \
          hardware/qcom/bootctrl \
          hardware/google/pixel/touch; do
   [ -d "$d" ] && touch "$d/.find-ignore"
