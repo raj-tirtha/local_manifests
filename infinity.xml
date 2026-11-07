@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="gh" fetch="https://github.com" />
+  <project name="raj-tirtha/android_device_google_pantah" path="device/google/pantah" remote="gh" revision="lineage-24.0" />
+  <project name="raj-tirtha/android_device_google_gs201" path="device/google/gs201" remote="gh" revision="lineage-24.0" />
+  <project name="LineageOS/android_device_google_pantah-kernels" path="device/google/pantah-kernels" remote="gh" revision="lineage-24.0" />
+  <project name="raj-tirtha/proprietary_vendor_google_cheetah" path="vendor/google/cheetah" remote="gh" revision="local-fixes-cp3a" clone-depth="1" />
+  <project name="raj-tirtha/proprietary_vendor_google_panther" path="vendor/google/panther" remote="gh" revision="local-fixes-cp3a" clone-depth="1" />
+  <project name="TogoFire/packages_apps_ViPER4AndroidFX" path="packages/apps/ViPER4AndroidFX" remote="gh" revision="v4a" />
+</manifest>

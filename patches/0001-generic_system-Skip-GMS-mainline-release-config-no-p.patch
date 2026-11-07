@@ -1,0 +1,25 @@
+From 285790e80357ccd52abffaf03abc0b125a92fe41 Mon Sep 17 00:00:00 2001
+From: raj-tirtha <rajtirtha247@gmail.com>
+Date: Sat, 3 Oct 2026 09:12:12 +0545
+Subject: [PATCH] generic_system: Skip GMS mainline release config (no prebuilt
+ modules in tree)
+
+---
+ target/product/generic_system.mk | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/target/product/generic_system.mk b/target/product/generic_system.mk
+index 7ee2abc..527f881 100644
+--- a/target/product/generic_system.mk
++++ b/target/product/generic_system.mk
+@@ -139,5 +139,5 @@ _my_paths := \
+ $(call require-artifacts-in-path, $(_my_paths), $(_my_allowed_list))
+ 
+ # Product config map to toggle between sources and prebuilts of required mainline modules
+-PRODUCT_RELEASE_CONFIG_MAPS += $(wildcard build/release/gms_mainline/required/release_config_map.textproto)
+-PRODUCT_RELEASE_CONFIG_MAPS += $(wildcard vendor/google_shared/build/release/gms_mainline/required/release_config_map.textproto)
++# PRODUCT_RELEASE_CONFIG_MAPS += $(wildcard build/release/gms_mainline/required/release_config_map.textproto)
++# PRODUCT_RELEASE_CONFIG_MAPS += $(wildcard vendor/google_shared/build/release/gms_mainline/required/release_config_map.textproto)
+-- 
+2.55.0
+
