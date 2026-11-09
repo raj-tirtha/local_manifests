@@ -27,3 +27,4 @@ echo "Penguin OS cheetah setup done."
 
 # Tensor: stop QTI-only framework lookups from retrying forever
 python3 "$(dirname "$0")/patches/qti_noretry.py"
+python3 "$(dirname "$0")/patches/qti_a2dp_offload.py"
