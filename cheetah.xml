@@ -40,8 +40,8 @@
   <project name="LineageOS/android_external_tinycompress"
            path="external/tinycompress" remote="github" revision="lineage-24.0" />
   <!-- 6.12 Syd kernel prebuilts (binaries committed in git) -->
-  <project name="raj-tirtha/device_google_pantah-kernel"
-           path="device/google/pantah-kernels/6.1" remote="github" revision="seventeen-6.1-lineage" clone-depth="1" />
+  <project name="raj-tirtha/android_device_google_pantah-kernels"
+           path="device/google/pantah-kernels/6.1" remote="github" revision="seventeen" clone-depth="1" />
   <!-- Wi-Fi supplicant (non-Qualcomm version) -->
   <remove-project name="Project-PenguinOS/external_wpa_supplicant_8" />
   <project name="LineageOS/android_external_wpa_supplicant_8"
